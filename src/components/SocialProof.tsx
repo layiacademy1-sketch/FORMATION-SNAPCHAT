@@ -7,12 +7,31 @@ const benefits = [
   "Optimisation de votre profil pour l'algorithme",
   "Techniques pour apparaître dans les tendances",
   "Stratégies de monétisation exclusives",
-  "Conseils pour gagner avoir plus d'abonnées.",
 ];
+
+export function FinalBenefit() {
+  return (
+    <section className="pb-24 px-4 bg-black relative overflow-hidden">
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-center gap-3 bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 transition-colors"
+        >
+          <CheckCircle className="text-snapchat w-5 h-5 flex-shrink-0" />
+          <span className="text-sm font-bold text-white/80">
+            Après la formation, vous aurez accès à une application contenant de nombreuses autres formations et conseils.
+          </span>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
 export default function SocialProof() {
   return (
-    <section className="pt-12 pb-24 px-4 bg-black relative overflow-hidden">
+    <section className="pt-12 pb-12 px-4 bg-black relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

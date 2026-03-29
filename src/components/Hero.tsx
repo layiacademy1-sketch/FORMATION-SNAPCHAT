@@ -46,18 +46,18 @@ export default function Hero() {
         >
           <div className="absolute top-0 right-0 p-4">
              <span className="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">
-               -70% AUJOURD'HUI
+               OFFRE LANCEMENT
              </span>
           </div>
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-baseline gap-4">
-              <span className="text-white/40 line-through text-2xl font-bold italic">99,99€</span>
+              <span className="text-white/40 line-through text-2xl font-bold italic">249,99 €</span>
               <span className="text-snapchat text-6xl md:text-7xl font-black tracking-tighter">29,99€</span>
             </div>
 
             <motion.a
-              href="https://pay.sumup.com/b2c/QSGXWJHA"
+              href="https://wa.me/33757828250?text=Bonjour%2C%20je%20me%20permets%20de%20vous%20contacter%20car%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20formation%20Snapchat."
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -67,15 +67,15 @@ export default function Hero() {
               PRENDRE LA FORMATION
             </motion.a>
 
-            <p className="text-white/40 text-xs font-medium uppercase tracking-widest">
+            <p className="text-white text-xs font-medium uppercase tracking-widest">
               Offre limitée
             </p>
 
             <div className="mt-4 pt-4 border-t border-white/5 w-full">
-              <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-3">
+              <p className="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-3">
                 Paiement sécurisé
               </p>
-              <div className="flex justify-center items-center gap-6 opacity-20 grayscale">
+              <div className="flex justify-center items-center gap-6">
                 <span className="text-white font-black text-xs italic tracking-tighter">SUMUP</span>
                 <span className="text-white font-black text-xs italic tracking-tighter">VISA</span>
                 <span className="text-white font-black text-xs italic tracking-tighter">MASTERCARD</span>

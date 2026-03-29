@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="flex justify-center items-center h-20">
           <div className="flex-shrink-0">
             <span className="text-2xl font-black tracking-tighter text-white uppercase">
-              FORMATION<span className="text-snapchat">SNAPCHAT</span>
+              FORMATION <span className="text-snapchat">SNAPCHAT</span>
             </span>
           </div>
         </div>

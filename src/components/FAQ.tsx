@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Comment vais-je recevoir ma formation ?",
-    answer: "Dès que votre paiement est validé, vous recevrez un email avec un lien de téléchargement instantané pour tous les ebooks.",
+    answer: "Dès que votre paiement est validé, vous recevrez un message avec toutes les instructions nécessaires.",
   },
   {
     question: "Y a-t-il des mises à jour ?",
