@@ -95,7 +95,7 @@ export default function Hero() {
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-snapchat/20 rounded-full blur-[60px] -z-10" />
           <div className="bg-white/5 border border-white/10 p-4 rounded-3xl backdrop-blur-sm relative w-full max-w-[350px] aspect-[9/16] overflow-hidden">
             <iframe
-              src="https://www.youtube.com/embed/xhAs8UEmejY?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/xhAs8UEmejY?autoplay=0&controls=1&modestbranding=1&rel=0"
               title="Snapchat Expert Video"
               className="w-full h-full rounded-2xl"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
