@@ -57,7 +57,9 @@ export default function Hero() {
             </div>
 
             <motion.a
-              href="#pricing"
+              href="https://pay.sumup.com/b2c/QSGXWJHA"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full bg-snapchat text-black py-6 rounded-2xl font-black text-xl tracking-tight uppercase shadow-[0_0_30px_rgba(255,252,0,0.3)] hover:shadow-[0_0_50px_rgba(255,252,0,0.5)] transition-all flex items-center justify-center gap-3"
@@ -66,12 +68,41 @@ export default function Hero() {
             </motion.a>
 
             <p className="text-white/40 text-xs font-medium uppercase tracking-widest">
-              Offre limitée dans le temps
+              Offre limitée
             </p>
+
+            <div className="mt-4 pt-4 border-t border-white/5 w-full">
+              <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.2em] mb-3">
+                Paiement sécurisé
+              </p>
+              <div className="flex justify-center items-center gap-6 opacity-20 grayscale">
+                <span className="text-white font-black text-xs italic tracking-tighter">SUMUP</span>
+                <span className="text-white font-black text-xs italic tracking-tighter">VISA</span>
+                <span className="text-white font-black text-xs italic tracking-tighter">MASTERCARD</span>
+              </div>
+            </div>
           </div>
         </motion.div>
 
         <Countdown />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 relative flex justify-center"
+        >
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-snapchat/20 rounded-full blur-[60px] -z-10" />
+          <div className="bg-white/5 border border-white/10 p-4 rounded-3xl backdrop-blur-sm relative w-full max-w-[350px] aspect-[9/16] overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/xhAs8UEmejY?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0"
+              title="Snapchat Expert Video"
+              className="w-full h-full rounded-2xl"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
