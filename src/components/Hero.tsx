@@ -46,14 +46,14 @@ export default function Hero() {
         >
           <div className="absolute top-0 right-0 p-4">
              <span className="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">
-               OFFRE LANCEMENT
+               Offre à durée limitée
              </span>
           </div>
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-baseline gap-4">
-              <span className="text-white/40 line-through text-2xl font-bold italic">249,99 €</span>
-              <span className="text-snapchat text-6xl md:text-7xl font-black tracking-tighter">29,99€</span>
+              <span className="text-white/40 line-through text-lg md:text-xl font-bold italic whitespace-nowrap">249,99 €</span>
+              <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">149,99 €</span>
             </div>
 
             <motion.a
@@ -67,24 +67,70 @@ export default function Hero() {
               PRENDRE LA FORMATION
             </motion.a>
 
-            <p className="text-white text-xs font-medium uppercase tracking-widest">
-              Offre limitée
+            <p className="text-white text-xs font-medium uppercase tracking-widest leading-relaxed">
+              À l’issue de la formation, vous aurez accès à une application pour voir plein d’autres formations (Instagram, TikTok, etc.).
             </p>
-
-            <div className="mt-4 pt-4 border-t border-white/5 w-full">
-              <p className="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-3">
-                Paiement sécurisé
-              </p>
-              <div className="flex justify-center items-center gap-6">
-                <span className="text-white font-black text-xs italic tracking-tighter">SUMUP</span>
-                <span className="text-white font-black text-xs italic tracking-tighter">VISA</span>
-                <span className="text-white font-black text-xs italic tracking-tighter">MASTERCARD</span>
-              </div>
-            </div>
           </div>
         </motion.div>
 
         <Countdown />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 mb-16 flex justify-center"
+        >
+          <motion.a
+            href="https://www.snapchat.com/add/layi.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(255,252,0,0.9)" }}
+            whileTap={{ scale: 0.95 }}
+            className="group relative inline-flex items-center gap-4 bg-black border-2 border-snapchat text-snapchat px-10 py-5 rounded-2xl font-black text-xl uppercase tracking-wider shadow-[0_0_40px_rgba(255,252,0,0.5)] transition-all overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-4">
+              <motion.span
+                animate={{ 
+                  y: [0, -8, 0],
+                  scale: [1, 1.15, 1],
+                  rotate: [-5, 5, -5]
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 1.2,
+                  ease: "easeInOut"
+                }}
+                className="inline-block"
+              >
+                <svg className="w-10 h-10 fill-snapchat drop-shadow-[0_0_12px_rgba(255,252,0,0.9)]" viewBox="0 0 24 24">
+                  <path d="M12 2.75c-4.42 0-8 3.58-8 8 0 3.1 1.76 5.79 4.34 7.14l-.34.34c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l.34-.34C10.21 19.83 11.08 20 12 20s1.79-.17 2.25-.75l.34.34c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-.34-.34C18.24 16.54 20 13.85 20 10.75c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                </svg>
+              </motion.span>
+              Nous suivre sur Snapchat
+            </span>
+            
+            {/* Shine Effect */}
+            <motion.div
+              animate={{
+                x: ['-100%', '200%'],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "linear",
+              }}
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 z-20"
+            />
+
+            {/* Pulsing Backlight */}
+            <motion.div 
+              animate={{ opacity: [0.3, 0.7, 0.3], scale: [1, 1.1, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+              className="absolute inset-0 bg-snapchat rounded-2xl blur-3xl -z-10" 
+            />
+          </motion.a>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

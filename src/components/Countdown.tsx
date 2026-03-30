@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 
 export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
-    days: 4,
+    days: 2,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
 
   useEffect(() => {
-    // We'll set a target date 4 days from now for the demo
+    // We'll set a target date 2 days from now for the demo
     const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 4);
+    targetDate.setDate(targetDate.getDate() + 2);
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -46,7 +46,7 @@ export default function Countdown() {
 
   return (
     <div className="flex gap-2 sm:gap-4 justify-center mt-8">
-      <TimeUnit value={timeLeft.days} label="Jours" />
+      <TimeUnit value={timeLeft.days} label="j" />
       <TimeUnit value={timeLeft.hours} label="Heures" />
       <TimeUnit value={timeLeft.minutes} label="Min" />
       <TimeUnit value={timeLeft.seconds} label="Sec" />
