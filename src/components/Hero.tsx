@@ -68,7 +68,7 @@ export default function Hero() {
             </motion.a>
 
             <p className="text-white text-xs font-medium uppercase tracking-widest leading-relaxed">
-              À l’issue de la formation, vous aurez accès à une application pour voir plein d’autres formations (Instagram, TikTok, etc.).
+              À l’issue de la formation, vous aurez accès à un groupe d'accompagnement pour continuer à développer votre Snapchat jusqu'à la monétisation.
             </p>
           </div>
         </motion.div>
@@ -82,7 +82,7 @@ export default function Hero() {
           className="mt-12 mb-16 flex justify-center"
         >
           <motion.a
-            href="https://www.snapchat.com/add/layi.fr"
+            href="https://www.snapchat.com/add/layiagency"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(255,252,0,0.9)" }}
