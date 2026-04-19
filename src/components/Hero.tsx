@@ -73,11 +73,12 @@ export default function Hero() {
               <Countdown />
             </div>
 
-            <p className="text-white text-xs font-black uppercase tracking-widest leading-relaxed px-4 sm:px-0">
-               Réserver votre créneau pour la formation.
-            </p>
+            <h3 className="text-white text-lg md:text-xl font-black uppercase tracking-tighter leading-tight px-4 sm:px-0 flex items-center gap-3">
+              <span className="w-2 h-2 bg-snapchat rounded-full animate-pulse shadow-[0_0_10px_#FFFC00]" />
+              Réservez votre créneau pour la formation
+            </h3>
 
-            <div className="w-full bg-snapchat rounded-2xl overflow-hidden border-2 border-snapchat shadow-[0_0_30px_rgba(255,252,0,0.2)]">
+            <div className="w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40">
               <div 
                 className="calendly-inline-widget" 
                 data-url="https://calendly.com/consultingoff/rdv?hide_event_type_details=1&hide_gdpr_banner=1" 
