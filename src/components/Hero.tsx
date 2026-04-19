@@ -1,7 +1,20 @@
+import { useEffect } from "react";
 import { motion } from "motion/react";
 import Countdown from "./Countdown";
 
 export default function Hero() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) document.body.removeChild(existingScript);
+    };
+  }, []);
+
   return (
     <section className="relative pt-32 pb-0 px-4 overflow-hidden">
       {/* Background Glow */}
@@ -42,40 +55,37 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 max-w-lg mx-auto backdrop-blur-sm relative overflow-hidden"
+          className="bg-white/5 border border-white/10 rounded-3xl p-0 sm:p-8 md:p-12 max-w-xl mx-auto backdrop-blur-sm relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 p-4">
+          <div className="absolute top-0 right-0 p-4 z-10">
              <span className="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">
                Offre à durée limitée
              </span>
           </div>
 
-          <div className="flex flex-col items-center gap-6">
-            <div className="flex items-baseline gap-4">
+          <div className="flex flex-col items-center pt-12 sm:pt-6 gap-6">
+            <div className="flex items-baseline gap-4 px-4 sm:px-0">
               <span className="text-white/40 line-through text-lg md:text-xl font-bold italic whitespace-nowrap">249,99 €</span>
               <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">79,99 €</span>
             </div>
 
-            <motion.a
-              href="https://calendly.com/consultingoff/rdv"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full bg-snapchat text-black py-6 rounded-2xl font-black text-xl tracking-tight uppercase shadow-[0_0_30px_rgba(255,252,0,0.3)] hover:shadow-[0_0_50px_rgba(255,252,0,0.5)] transition-all flex items-center justify-center gap-3"
-            >
-              PRENDRE LA FORMATION
-            </motion.a>
+            <div className="w-full px-4 sm:px-0">
+              <Countdown />
+            </div>
 
-            <p className="text-white text-xs font-medium uppercase tracking-widest leading-relaxed">
-              ⚠️ Il ne s’agit pas d’un ebook, mais d’une formation complète avec accompagnement en visioconférence, étape par étape.
-              <br /><br />
-              À l’issue de la formation, vous aurez accès à un groupe d'accompagnement pour continuer à développer votre Snapchat jusqu'à la monétisation.
+            <p className="text-white text-xs font-black uppercase tracking-widest leading-relaxed px-4 sm:px-0">
+               Réserver votre créneau pour la formation.
             </p>
+
+            <div className="w-full bg-snapchat rounded-2xl overflow-hidden border-2 border-snapchat shadow-[0_0_30px_rgba(255,252,0,0.2)]">
+              <div 
+                className="calendly-inline-widget" 
+                data-url="https://calendly.com/consultingoff/rdv?hide_event_type_details=1&hide_gdpr_banner=1" 
+                style={{ width: '100%', minWidth: '320px', height: '450px' }}
+              />
+            </div>
           </div>
         </motion.div>
-
-        <Countdown />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -45,7 +45,7 @@ export default function Countdown() {
   );
 
   return (
-    <div className="flex gap-2 sm:gap-4 justify-center mt-8">
+    <div className="flex gap-2 sm:gap-4 justify-center">
       <TimeUnit value={timeLeft.days} label="j" />
       <TimeUnit value={timeLeft.hours} label="Heures" />
       <TimeUnit value={timeLeft.minutes} label="Min" />
