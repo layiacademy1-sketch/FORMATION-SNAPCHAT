@@ -53,11 +53,11 @@ export default function Hero() {
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-baseline gap-4">
               <span className="text-white/40 line-through text-lg md:text-xl font-bold italic whitespace-nowrap">249,99 €</span>
-              <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">149,99 €</span>
+              <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">79,99 €</span>
             </div>
 
             <motion.a
-              href="https://wa.me/33757828250?text=Bonjour%2C%20je%20me%20permets%20de%20vous%20contacter%20car%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20formation%20Snapchat."
+              href="https://calendly.com/consultingoff/rdv"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -68,6 +68,8 @@ export default function Hero() {
             </motion.a>
 
             <p className="text-white text-xs font-medium uppercase tracking-widest leading-relaxed">
+              ⚠️ Il ne s’agit pas d’un ebook, mais d’une formation complète avec accompagnement en visioconférence, étape par étape.
+              <br /><br />
               À l’issue de la formation, vous aurez accès à un groupe d'accompagnement pour continuer à développer votre Snapchat jusqu'à la monétisation.
             </p>
           </div>
