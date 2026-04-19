@@ -66,7 +66,7 @@ export default function Hero() {
           <div className="flex flex-col items-center pt-12 sm:pt-6 gap-6">
             <div className="flex items-baseline gap-4 px-4 sm:px-0">
               <span className="text-white/40 line-through text-lg md:text-xl font-bold italic whitespace-nowrap">249,99 €</span>
-              <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">79,99 €</span>
+              <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">49,99 €</span>
             </div>
 
             <div className="w-full px-4 sm:px-0">
