@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion } from "motion/react";
-import Countdown from "./Countdown";
 
 export default function Hero() {
   useEffect(() => {
@@ -57,22 +56,7 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="bg-white/5 border border-white/10 rounded-3xl p-0 sm:p-8 md:p-12 max-w-xl mx-auto backdrop-blur-sm relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 p-4 z-10">
-             <span className="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">
-               Offre à durée limitée
-             </span>
-          </div>
-
-          <div className="flex flex-col items-center pt-12 sm:pt-6 gap-6">
-            <div className="flex items-baseline gap-4 px-4 sm:px-0">
-              <span className="text-white/40 line-through text-lg md:text-xl font-bold italic whitespace-nowrap">149,99 €</span>
-              <span className="text-snapchat text-5xl md:text-6xl font-black tracking-tighter whitespace-nowrap">49,99 €</span>
-            </div>
-
-            <div className="w-full px-4 sm:px-0">
-              <Countdown />
-            </div>
-
+          <div className="flex flex-col items-center pt-8 sm:pt-6 gap-6">
             <h3 className="text-white text-lg md:text-xl font-black uppercase tracking-tighter leading-tight px-4 sm:px-0 flex items-center gap-3">
               <span className="w-2 h-2 bg-snapchat rounded-full animate-pulse shadow-[0_0_10px_#FFFC00]" />
               Réservez votre créneau pour la formation
